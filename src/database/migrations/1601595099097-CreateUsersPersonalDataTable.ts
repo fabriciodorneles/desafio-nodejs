@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export default class CreateUserPersonalDataTable1601593475258 implements MigrationInterface {
+export default class CreateUsersPersonalDataTable1601595099097 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
@@ -21,12 +21,12 @@ export default class CreateUserPersonalDataTable1601593475258 implements Migrati
             type: 'varchar',
           },
           {
-            name: 'adress',
+            name: 'address_id',
             type: 'int',
             isNullable: true,
           },
           {
-            name: 'contact',
+            name: 'contact_id',
             type: 'int',
             isNullable: true,
           },
@@ -43,17 +43,17 @@ export default class CreateUserPersonalDataTable1601593475258 implements Migrati
         ],
         foreignKeys: [
           {
-            name: 'personal_data_adress',
-            referencedTableName: 'users_adress_data',
+            name: 'personal_data_address',
+            referencedTableName: 'users_address_data',
             referencedColumnNames: ['id'],
-            columnNames: ['adress'],
+            columnNames: ['address_id'],
             onDelete: 'SET NULL',
           },
           {
             name: 'personal_data_contact',
             referencedTableName: 'users_contact_data',
             referencedColumnNames: ['id'],
-            columnNames: ['contact'],
+            columnNames: ['contact_id'],
             onDelete: 'SET NULL',
           },
         ],
@@ -62,6 +62,6 @@ export default class CreateUserPersonalDataTable1601593475258 implements Migrati
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('orders');
+    await queryRunner.dropTable('users_personal_data');
   }
 }

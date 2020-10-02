@@ -1,15 +1,15 @@
 export default class CrudeDataRepository {
-  private crudeData: JSON[];
+  private crudeData: any[];
 
   constructor() {
     this.crudeData = [];
   }
 
-  public initializeCrudeData(data: JSON[]): void {
+  public initializeCrudeData(data: any[]): void {
     this.crudeData = data;
   }
 
-  public getCrudeData(): JSON[] {
+  public getCrudeData(): any[] {
     return this.crudeData;
   }
 }
