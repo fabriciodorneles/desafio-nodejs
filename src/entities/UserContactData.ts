@@ -8,7 +8,7 @@ import {
 
 @Entity('users_contact_data')
 class UserContactData {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column()

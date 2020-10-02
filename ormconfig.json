@@ -4,11 +4,11 @@
    "port": 32768,
    "username": "root",
    "password": "mutant",
-   "database": "testeDB",
+   "database": "mutantDB",
    "synchronize": true,
    "logging": false,
    "entities": [
-      "src/entity/**/*.ts"
+      "src/entities/*.ts"
    ],
    "migrations": [
       "src/database/migrations/*.ts"

@@ -17,8 +17,8 @@ initialRouter.get('/download', async (request, response: Response) => {
 });
 initialRouter.get('/store', async (request, response: Response) => {
   const storeDataService = new StoreDataService(crudeDataRepository);
-  storeDataService.execute();
-  return response.json('stored');
+  const storedData = await storeDataService.execute();
+  return response.json(storedData);
 });
 initialRouter.get('/', async (request, response: Response) => {
   return response.json('Welcome! -- /download -- for download Data from API');

@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export default class CreateUsersPersonalDataTable1601595099097 implements MigrationInterface {
+export default class CreateUsersPersonalDataTable1601642551415 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
@@ -8,9 +8,9 @@ export default class CreateUsersPersonalDataTable1601595099097 implements Migrat
         columns: [
           {
             name: 'id',
-            type: 'int',
+            type: 'varchar',
             isPrimary: true,
-            generationStrategy: 'increment',
+            generationStrategy: 'uuid',
           },
           {
             name: 'name',
@@ -22,12 +22,12 @@ export default class CreateUsersPersonalDataTable1601595099097 implements Migrat
           },
           {
             name: 'address_id',
-            type: 'int',
+            type: 'varchar',
             isNullable: true,
           },
           {
             name: 'contact_id',
-            type: 'int',
+            type: 'varchar',
             isNullable: true,
           },
           {

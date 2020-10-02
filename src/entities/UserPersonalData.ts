@@ -13,7 +13,7 @@ import UserContactData from './UserContactData';
 
 @Entity('users_personal_data')
 class UserPersonalData {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column()
@@ -23,14 +23,14 @@ class UserPersonalData {
   username: string;
 
   @Column()
-  adress_id: number;
+  address_id: string;
 
   @ManyToOne(() => UserAddressData)
-  @JoinColumn({ name: 'adress_id' })
-  adress_data: UserAddressData;
+  @JoinColumn({ name: 'address_id' })
+  address_data: UserAddressData;
 
   @Column()
-  contact_id: number;
+  contact_id: string;
 
   @OneToOne(() => UserContactData)
   @JoinColumn({ name: 'contact_id' })
