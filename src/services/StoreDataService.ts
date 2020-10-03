@@ -4,13 +4,6 @@ import UserContactData from '../entities/UserContactData';
 import UserPersonalData from '../entities/UserPersonalData';
 import CrudeDataRepository from '../repositories/CrudeDataRepository';
 
-interface IUserData {
-  name: string;
-  username: string;
-  address_id: string;
-  contact_id: string;
-}
-
 class StoreDataService {
   private crudeDataRepository: CrudeDataRepository;
 
@@ -18,7 +11,7 @@ class StoreDataService {
     this.crudeDataRepository = crudeDataRepository;
   }
 
-  public async execute(): Promise<any[]> {
+  public async execute(): Promise<UserPersonalData[]> {
     const crudeData = this.crudeDataRepository.getCrudeData();
     const personalDataRepository = getRepository(UserPersonalData);
     const addressDataRepository = getRepository(UserAddressData);
@@ -53,8 +46,6 @@ class StoreDataService {
         return userData;
       }),
     );
-    console.log('oi');
-    console.log(userDataList);
     return userDataList;
   }
 }
