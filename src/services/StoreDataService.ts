@@ -1,32 +1,23 @@
-import { getRepository } from 'typeorm';
-import UserAddressData from '../entities/UserAddressData';
-import UserContactData from '../entities/UserContactData';
 import UserPersonalData from '../entities/UserPersonalData';
 import CrudeDataRepository from '../repositories/CrudeDataRepository';
+import IAddressDataRepository from '../repositories/IAddressDataRepository';
+import IContactDataRepository from '../repositories/IContactDataRepository';
+import IPersonalDataRepository from '../repositories/IPersonalDataRepository';
 
 class StoreDataService {
-  private crudeDataRepository: CrudeDataRepository;
-
-  constructor(crudeDataRepository: CrudeDataRepository) {
-    this.crudeDataRepository = crudeDataRepository;
-  }
+  constructor(
+    private crudeDataRepository: CrudeDataRepository,
+    private personalDataRepository: IPersonalDataRepository,
+    private addressDataRepository: IAddressDataRepository,
+    private contactDataRepository: IContactDataRepository,
+  ) {}
 
   public async execute(): Promise<UserPersonalData[]> {
     const crudeData = this.crudeDataRepository.getCrudeData();
-    const personalDataRepository = getRepository(UserPersonalData);
-    const addressDataRepository = getRepository(UserAddressData);
-    const contactDataRepository = getRepository(UserContactData);
 
     const userDataList = await Promise.all(
       crudeData.map(async data => {
-        const contactData = contactDataRepository.create({
-          email: data.email,
-          phone: data.phone,
-          website: data.website,
-        });
-        const userContact = await contactDataRepository.save(contactData);
-
-        const addressData = addressDataRepository.create({
+        const userAddress = await this.addressDataRepository.create({
           street: data.address.street,
           suite: data.address.suite,
           city: data.address.city,
@@ -34,16 +25,20 @@ class StoreDataService {
           lat: data.address.geo.lat,
           lng: data.address.geo.lng,
         });
-        const userAddress = await addressDataRepository.save(addressData);
 
-        const personalData = personalDataRepository.create({
+        const userContact = await this.contactDataRepository.create({
+          email: data.email,
+          phone: data.phone,
+          website: data.website,
+        });
+
+        const personalData = await this.personalDataRepository.create({
           name: data.name,
           username: data.username,
           address_id: userAddress.id,
           contact_id: userContact.id,
         });
-        const userData = personalDataRepository.save(personalData);
-        return userData;
+        return personalData;
       }),
     );
     return userDataList;
