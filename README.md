@@ -1,9 +1,31 @@
-# Node Challenge - Mutant
+<h1 align="center">
+    <bold>Node Challenge - Mutant</bold>
+</h1>
+
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/fabriciodorneles/desafio-nodejs?style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/fabriciodorneles/desafio-nodejs?style=flat-square">
+  <img alt="Made by Fabricio Dorneles" src="https://img.shields.io/badge/made%20by-Fabricio Dorneles-%237519C1?style=flat-square"><br/>
+
+</p>
+<p align="center">
+  <a href="#-📌Sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#How-to-Execute">Como Executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
+
+
+## 📌 Sobre
+
 This is an API for a challenge of Mutant Company.  
 
 Author: [Fabricio Dorneles](https://github.com/fabriciodorneles)   
 
 The API consumes the data of another [API](https://jsonplaceholder.typicode.com/users), normalize and store it in a MySql Data Base.  
+You can see the API Documentation via postman, in this [link](https://explore.postman.com/api/8408/desafio-nodejs---mutant). After install in you machine you can test the API in the same [link](https://explore.postman.com/api/8408/desafio-nodejs---mutant).
+
+
 
 It has two basic functionalities:  
 ### **'/download' Functionality**
@@ -18,7 +40,23 @@ The crude user data is normalized and stored in **3 different Tables**:
 - users_personal_data(this table links the two other with foreign keys)  
 (name, username, address_id, contact_id)
 
-## How to Execute
+## ⚙ Technologies
+-  [Typescript](https://www.typescriptlang.org/)
+-  [Node.js](https://nodejs.org/en/)
+-  [axios](https://github.com/axios/axios)
+-  [Docker](https://www.docker.com/)
+-  [MySql](https://www.mysql.com/)
+-  [Typeorm](https://typeorm.io/#/)
+-  [Jest](https://jestjs.io/)
+-  [Winston](https://www.npmjs.com/package/winston)
+-  [ESLint](https://eslint.org/)
+-  [Prettier](https://prettier.io/)
+-  [EditorConfig](https://editorconfig.org/)
+
+
+NodeJS, Express, MySql, Typeorm, Axios, Winston, Jest, Eslint, Prettier
+
+## ⚒ How to Execute
 This is a Local version of the API. You need to run it from you local machine.
 - ### **Pre-requisites**
   - **[Node.js](https://nodejs.org/en/)** installed
