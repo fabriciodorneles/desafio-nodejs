@@ -10,7 +10,11 @@ const initialRouter = Router();
 const crudeDataRepository = new CrudeDataRepository();
 
 initialRouter.get('/', async (request, response: Response) => {
-  return response.json('Welcome! -- /download -- for download Data from API');
+  return response.json({
+    WelcomeTo: 'Challenge API!',
+    Route1: '-- /download -- for download Data from API',
+    Route2: '-- /store -- for store de Dowloaded data on the BD',
+  });
 });
 
 initialRouter.get('/download', async (request, response: Response) => {

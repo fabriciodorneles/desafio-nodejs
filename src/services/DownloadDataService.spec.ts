@@ -1,6 +1,7 @@
 import DownloadDataService from './DownloadDataService';
 import CrudeDataRepository from '../repositories/CrudeDataRepository';
 import api from '../client/jsonplaceholer';
+import AppError from '../errors/AppError';
 
 jest.mock('../client/jsonplaceholer');
 
@@ -74,6 +75,6 @@ describe('DownloadData', () => {
     const crudeDataRepository = new CrudeDataRepository();
     const downloadService = new DownloadDataService(crudeDataRepository);
 
-    await expect(downloadService.execute()).rejects.toThrow(errorMessage);
+    await expect(downloadService.execute()).rejects.toBeInstanceOf(AppError);
   });
 });

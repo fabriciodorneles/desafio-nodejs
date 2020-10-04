@@ -10,6 +10,5 @@ const app = express();
 app.use(routes);
 
 app.listen(3333, () => {
-  MyLogger.writeInfoLog('🏹 Server started on port 3333'); // emoji WIN + .
-  // console.log('🏹 Server started on port 3333'); // emoji WIN + .
+  MyLogger.writeInfoLog('🏹 Server started on port 3333');
 });
