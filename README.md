@@ -22,7 +22,8 @@ This is an API for a challenge of Mutant Company.
 Author: [Fabricio Dorneles](https://github.com/fabriciodorneles)   
 
 The API consumes the data of another [API](https://jsonplaceholder.typicode.com/users), normalize and store it in a MySql Data Base.  
-You can see the API Documentation via postman, in this [link](https://explore.postman.com/api/8408/desafio-nodejs---mutant). After install in you machine you can test the API in the same [link](https://explore.postman.com/api/8408/desafio-nodejs---mutant).
+You can see the API Documentation via postman, in this [link](https://explore.postman.com/api/8408/desafio-nodejs---mutant). After install in you machine you can test the API in the same [link](https://explore.postman.com/api/8408/desafio-nodejs---mutant).  
+The Error Logs are stored in a file in the project directory via [Winston](https://www.npmjs.com/package/winston) Lib.
 
 
 
