@@ -81,7 +81,7 @@ This is a Local version of the API. You need to run it from you local machine.
 
   # Configuring DataBase Container
   $ docker run --name mysql-mutant -p 32769:3306 -e MYSQL_ROOT_PASSWORD=mutant -e MYSQL_DATABASE=mutantDB -d mysql:5.7.31
-  # YOU MIGHT HAVE TO WAIT A WHILE BEFORE EXECUTING THE NEXT COMMAND
+  # YOU MIGHT HAVE TO WAIT A WHILE BEFORE EXECUTING THE NEXT COMMAND 
   # (Because Docker have to initiate the Database)
 
   # Run the migrations to create the Mysql DB Tables
