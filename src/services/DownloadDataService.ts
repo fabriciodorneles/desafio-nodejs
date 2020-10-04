@@ -1,4 +1,5 @@
 import api from '../client/jsonplaceholer';
+import AppError from '../errors/AppError';
 import CrudeDataRepository from '../repositories/CrudeDataRepository';
 
 class DownloadDataService {
@@ -13,7 +14,7 @@ class DownloadDataService {
       const { data } = await api.get('/users');
       this.crudeDataRepository.initializeCrudeData(data);
     } catch (err) {
-      throw Error(`Error in API downloading.`);
+      throw new AppError(`Error in API downloading.`, 404);
     }
 
     return this.crudeDataRepository.getCrudeData();

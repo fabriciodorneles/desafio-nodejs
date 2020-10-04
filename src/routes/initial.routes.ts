@@ -19,7 +19,7 @@ initialRouter.get('/download', async (request, response: Response) => {
     const crudeData = await downloadDataService.execute();
     return response.json(crudeData);
   } catch (err) {
-    return response.status(400).json({ error: err.message });
+    return response.status(err.statusCode).json({ error: err.message });
   }
 });
 
