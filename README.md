@@ -8,7 +8,7 @@ The API consumes the data of another [API](https://jsonplaceholder.typicode.com/
 It has two basic functionalities:  
 ### **'/download' Functionality**
 this route consumes the API, downloading the data and temporarily storing it crudely in memory. This route returns a JSON with the stored content.
-### **'/Store' Funcionality**
+### **'/store' Funcionality**
 This route stores the downloaded crude user data on the mysql DB.  
 The crude user data is normalized and stored in **3 different Tables**:  
 - users_address_data  
