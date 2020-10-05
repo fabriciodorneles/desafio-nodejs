@@ -55,3 +55,5 @@
 {"timeStamp":"10/4/2020, 8:10:56 PM","message":"User not in Suite. Not Recorded.","level":"error","service":"user-service"}
 {"timeStamp":"10/4/2020, 8:10:56 PM","message":"User not in Suite. Not Recorded.","level":"error","service":"user-service"}
 {"timeStamp":"10/4/2020, 8:10:56 PM","message":"User not in Suite. Not Recorded.","level":"error","service":"user-service"}
+{"timeStamp":"10/4/2020, 8:35:04 PM","message":"🏹 Server started on port 3333","level":"info","service":"user-service"}
+{"timeStamp":"10/4/2020, 8:36:44 PM","message":"🏹 Server started on port 3333","level":"info","service":"user-service"}

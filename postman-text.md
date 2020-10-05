@@ -1,5 +1,5 @@
 <h1 align="center">
-    <bold>Node Challenge - Mutant</bold>
+    <bold>Node Challenge(Online Version) - Mutant</bold>
 </h1>
 
 <p align="center">
@@ -11,20 +11,20 @@
 <p align="center">
   <a href="#-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-demo-version">Demo Online Version</a>
   <a href="#-how-to-execute">How to Execute</a>
 </p>
 
 
 ## 📌 About
 
-This is an API for a job challenge.  
+This is an API made for a Job challenge.  
 
 Author: [Fabricio Dorneles](https://github.com/fabriciodorneles)   
 
 The API consumes the data of another [API](https://jsonplaceholder.typicode.com/users), normalize and store it in a MySql Data Base.  
-You can see the API Documentation via postman, in this [link](https://explore.postman.com/api/8408/desafio-nodejs---mutant). After install in you machine you can test the API in the same [link](https://explore.postman.com/api/8408/desafio-nodejs---mutant).  
 The Error Logs are stored in a file in the project directory via [Winston](https://www.npmjs.com/package/winston) Lib.
+
+
 
 It has two basic functionalities:  
 ### **'/download' Functionality**
@@ -51,14 +51,11 @@ The crude user data is normalized and stored in **3 different Tables**:
 -  [ESLint](https://eslint.org/)
 -  [Prettier](https://prettier.io/)
 -  [EditorConfig](https://editorconfig.org/)
--  [Digital Ocean](https://www.digitalocean.com/)
-
-
-## 🤿 Demo Version
-You can test the API(Online) and see the documentation in this [Postman Link](https://explore.postman.com/api/8431/online---desafio-node-mutant).
 
 ## ⚒ How to Execute
-This is a Local version of the API. You need to run it from you local machine.
+This is an Online version of the API.  
+If want to install the project in you machine you can follow this steps:
+
 - ### **Pre-requisites**
   - **[Node.js](https://nodejs.org/en/)** installed
   - **[Git](https://git-scm.com/)** installed and configured
@@ -92,4 +89,7 @@ This is a Local version of the API. You need to run it from you local machine.
   $ yarn dev:server
 
   # Now you can acess the routes via Browser / Postman / Insomnia / Etc.
+
+  # To run automated tests just type
+  $ yarn test
 ```
