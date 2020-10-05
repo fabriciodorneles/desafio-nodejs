@@ -1,7 +1,6 @@
 {
    "type": "mysql",
-   "host": "localhost",
-   "port": 32769,
+   "host": "db_mutant",
    "username": "root",
    "password": "mutant",
    "database": "mutantDB",
