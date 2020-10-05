@@ -52,12 +52,21 @@ The crude user data is normalized and stored in **3 different Tables**:
 -  [Prettier](https://prettier.io/)
 -  [EditorConfig](https://editorconfig.org/)
 -  [Digital Ocean](https://www.digitalocean.com/)
-
-
+  
 ## 🤿 Demo Version
 You can test the API(Online) and see the documentation in this [Postman Link](https://explore.postman.com/api/8431/online---desafio-node-mutant).
 
-## ⚒ How to Execute
+## 🐳 Run app in Docker Container
+
+- ### **Pre-requisites**
+  - **[Git](https://git-scm.com/)** installed and configured
+  - **[Docker Desktop](https://www.docker.com/products/docker-desktop)** installed and configured
+```sh
+  $ git clone https://github.com/fabriciodorneles/desafio-nodejs
+  $ docker-compose up -d
+```
+
+## ⚒ How to Execute Project
 This is a Local version of the API. You need to run it from you local machine.
 - ### **Pre-requisites**
   - **[Node.js](https://nodejs.org/en/)** installed
