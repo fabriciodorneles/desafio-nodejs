@@ -92,4 +92,8 @@ This is a Local version of the API. You need to run it from you local machine.
   $ yarn dev:server
 
   # Now you can acess the routes via Browser / Postman / Insomnia / Etc.
+  
+  # To run automated tests just type
+  $ yarn test
+  
 ```
